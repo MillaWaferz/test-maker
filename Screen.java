@@ -99,6 +99,15 @@ public class Screen extends JFrame{
         boxes[2] = new JComboBox(amounts);
         west.add(boxes[2]);
         
+        JButton finish = new JButton("Finish");
+        add.setPreferredSize(new Dimension(150,150));
+        add.addActionListener(new ActionListener() { 
+              public void actionPerformed(ActionEvent e) { 
+                finishButtonPressed();
+              } 
+            } );
+        west.add(add);
+        
         
         // Set East Panel
         text = new JTextArea();
@@ -118,6 +127,10 @@ public class Screen extends JFrame{
         
         add(menu);
         
+    }
+    
+    public void finishButtonPressed(){
+        //blank for Owen
     }
     
     public void addButtonPressed(){
