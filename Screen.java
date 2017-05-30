@@ -28,7 +28,7 @@ public class Screen extends JFrame{
 	Color bgColor = Color.decode("#44C5F4");
 	
 	private String [] questionChoices = {"Multiple Choice", "Fill in the Blank", "Objective Based"};
-	private String [] difficulties = {"1","2","3","4","5"};
+	private String [] difficulties = {"1","2","3"};
 	private String [] amounts = {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25", "26","27","28","29","30"};
 	public String[] output = new String[3];
 	
@@ -101,9 +101,9 @@ public class Screen extends JFrame{
         
 		// Set East Panel
 		text = new JTextArea();
-		text.setFont(text.getFont().deriveFont(15f));
+		text.setFont(text.getFont().deriveFont(20f));
 		JScrollPane scrollPane = new JScrollPane(text);
-		scrollPane.setPreferredSize(new Dimension(getWidth()*7/10,getHeight()-200));
+		scrollPane.setPreferredSize(new Dimension(getWidth()*7/10,getHeight()*7/10 + 40));
 		
 		east.setBorder(BorderFactory.createEmptyBorder(getHeight()/20, 0, getHeight()/10, getWidth()/20));
 		west.setBorder(BorderFactory.createEmptyBorder(getHeight()/20, getWidth()/20, getHeight()/10, getWidth()/20));
