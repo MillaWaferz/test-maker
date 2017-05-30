@@ -2,36 +2,55 @@ import java.util.List;
 import java.util.ArrayList;
 public class QuestionBank
 {
-    public static ArrayList<Question> qBank;
+    public ArrayList<Question> qBank;
     public QuestionBank()
     {
         qBank = new ArrayList<Question>();
 
         //MC Template: qBank.add(new MultipleChoice("question",1,difficulty,0,new String[]{"a","b","c","d","e"}, "letter of correct answer"));
 
-    //Fill In Template: qBank.add(new FillInTheBlank(“question”,1, difficulty, 0, “answer”));
+    //Fill In Template: qBank.add(new FillInTheBlank("question",1, difficulty, 1, "answer"));
 
-    //Objective Question Template: qBank.add(new ObjectiveQuestion(“question”,1, difficulty, 0, “answer”));
+    //Objective Question Template: qBank.add(new ObjectiveQuestion("question",1, difficulty, 2, "answer"));
 
         //Objective Questions
 
         qBank.add(new MultipleChoice("Suppose m is a two-dimensional array of a size 4 by 4, with all its elements initialized to zeros. What will be the values stored in m after fill (m) is called? The method fill is defined as follows:\n Public void fill(int[][] m)\n       { \n        int n = m.length;\n         for (int i = 1; i < n - 1; i++)\n           {\n             For (int j = 1; j < n - 1; j++)\n           M[i][j] = 1;\n          }\n}",1,2,0,new String[]{"0000\n0000\n0000\n0000", "1100\n1100\n0000\n0000","0000\n0110\n0110\n0000","1110\n1110\n1110\n0000","1111\n1111\n1111\n1111"}, "C"));
 
-        qBank.add(new MultipleChoice("Which of the following statements will result in a syntax error?", 1, 1,0, new String[]{"String  x  = “123”;","Integer x = “123”;","Object x = “123”;","String[] x = {“123”};","All of the above will compile without  errors"}, "B"));
+        qBank.add(new MultipleChoice("Which of the following statements will result in a syntax error?", 1, 1,0, new String[]{"String  x  = '123';","Integer x = '123';","Object x = '123';","String[] x = {'123'};","All of the above will compile without  errors"}, "B"));
      
         //Chapter 3
-        qBank.add(new MultipleChoice("True or false: The name of a class in Java must be the same as the name of its source file (excluding the extension .java).",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+        qBank.add(new MultipleChoice("True or False: The name of a class in Java must be the same as the name of its source file (excluding the extension .java).",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
 
-        qBank.add(new MultipleChoice("True or false: The names of classes are case-sensitive.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+        qBank.add(new MultipleChoice("True or False: The names of classes are case-sensitive.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
 
-        qBank.add(new MultipleChoice("True or false: The import statement tells the computer which other classes use this class.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
+        qBank.add(new MultipleChoice("True or False: The import statement tells the computer which other classes use this class.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
 
+qBank.add(new MultipleChoice("True or False: The BugRunner program consists of one class.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+
+qBank.add(new MultipleChoice("True or False: A Java program can have as many classes as necessary.",1,2,0,new String[]{"True","False","c","d","e"}, "A"));
+
+qBank.add(new MultipleChoice("True or False: A Java program is allowed to create only one object of each class.",1,2,0,new String[]{"True","False","c","d","e"}, "B"));
+
+qBank.add(new MultipleChoice("True or False: Every class has a method called main.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
+
+qBank.add(new MultipleChoice("True or False: A class may have more than one constructor.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+
+qBank.add(new MultipleChoice("True or False: The programmer gives names to objects in their program.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+
+qBank.add(new MultipleChoice("True or False: When an object is created, the program always calls its init method.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
 
     //Chapter 4
      
     qBank.add(new MultipleChoice("Consider the following method: \n\npublic int mysteryMax(int[] a)\n   {\n     int m = 0;\n\n      for (int i = 0; i < a.length; i++)\n       \n{\n            Int sum = 0;\n\n            for (int k = i; k < a.length; k++)\n            {\n             sum+= a[k];\n               If (sum > m)\n  \nm = sum;\n            }\n     }\n\n       return m;\n }\nIf a contains -1, -3, 2, -3, 2, 1, what value will be returned by mysteryMax(a)?",1,1,0,new String[]{"-2","-1","1","2","3"}, "E"));
 
+qBank.add(new FillInTheBlank("Fill in the Missing Code: \n\n/** Returns the largest sum of any two elements.\n *  Precondition: n >= 2; a[0] … a[n-1] are filled out with values*/\npublic double maxSum(double[] a, int n\n\n{\n    <missing code>\n}",1,2, 1, "answers may vary"));
 
+qBank.add(new ObjectiveQuestion("Explain the result of the following code: double max = a[0] + a[1];\n\n        for (int i = 1; i < n; i++)\n            for (int j = 0; j < i; j++)\n                if  (a[i]+a[j] > max)\n                    Max = a[i] + a[j];\n        return max;\n\n",1,2, 2, "answers may vary"));
+
+qBank.add(new ObjectiveQuestion("Explain the result of the following code: double max1 = a[0], max2= a[0];\n\nfor (int i = 1; i < n; i++)\n            If (a[i] > max1)\n                max1 = a[i];\n\nfor (int i = 1; i < n;i++)\n            If (a[i] != max1 && a[i] > max2)\n                max2 = a[i];\n\n        return max1 + max2;\n",1, 3, 2, "answers may vary"));
+
+qBank.add(new ObjectiveQuestion("Explain the result of the following code: double max1 = a[0], max2 = a[1];\n\n\n        If (a[1] > a[0])\n        {\n            max1 = a[1];\n            max2 = a[0];\n        }\n\n        for (int i = 2; i < n; i++)\n        {\n            If (a[i] > max1)\n    {    max2 = max1;\n                max1 = a[0];\n            }\n        else if a[i] > max2)\n            max2 = a[i];\n\n}\n\nreturn max1 +max2;",1, 2, 2, "answers may vary"));
 
     //Chapter 5
 
@@ -49,15 +68,26 @@ public class QuestionBank
 
     qBank.add(new MultipleChoice("Consider the task of the elements of an array in ascending order. Which of the following statements are true? \n\nI.    Selection Sort always requires more comparisons than Insertion Sort.\nII.    Insertion Sort always requires no more moves than Selection Sort.\nIII.    Insertion Sort, on average, requires more moves than Selection Sort",1,2,0,new String[]{"I","II","III","I and II","II and III"}, "C"));
 
-    qBank.add(new MultipleChoice("Consider the following method:\n\n    public void mystery(int n)\n    {\n     If (n <- 0)\n           Return;\n\n    for (int i = 0; i < n; i++)\n        {\n         System.out.print(“_”);\n        }\n\n       for (int i = 0; i < n; i++)\n       {\n         System.out.print(“+”)\n     }\n     System.out.println():\n\n       mystery(n-1);\n }\n\nWhat is the output when mystery(4) is called?",1,2,0,new String[]{"----++++","----++++\n  ----++++\n  ----++++\n  ----++++"," ----+\n ----++\n    ----+++\n   ----++++"," -+\n    --++\n  ---+++\n    ----++++","----++++\n   ---+++\n    --++\n  -+"}, "E"));
+    qBank.add(new MultipleChoice("Consider the following method:\n\n    public void mystery(int n)\n    {\n     If (n <- 0)\n           Return;\n\n    for (int i = 0; i < n; i++)\n        {\n         System.out.print('_');\n        }\n\n       for (int i = 0; i < n; i++)\n       {\n         System.out.print("+")\n     }\n     System.out.println():\n\n       mystery(n-1);\n }\n\nWhat is the output when mystery(4) is called?",1,2,0,new String[]{"----++++","----++++\n  ----++++\n  ----++++\n  ----++++"," ----+\n ----++\n    ----+++\n   ----++++"," -+\n    --++\n  ---+++\n    ----++++","----++++\n   ---+++\n    --++\n  -+"}, "E"));
 
-    qBank.add(new MultipleChoice("Consider the following method: \n\n   public void mystery(int n)\n    {\n     If (n <= 0)\n           return;\n\n    mystery(n-1);\n\n for (int i = 0; i < n; i++)\n      {\n         System.out.println(“-”);\n      }\n\n       for (int i = 0; i < n; i++)\n       {\n         System.out.print(“+”);\n        }\n\n       System.out.println();\n }\n\nWhat is the output when mystery(4) is called?",1,2,0,new String[]{"----++++","----++++\n   ----++++\n  ----++++\n  ----++++","----+\n  ----++\n    ----+++\n   ----++++","-+\n --++\n  ---+++\n    ----++++","----++++\n   ---+++\n    --++\n  -+"}, "D"));
+    qBank.add(new MultipleChoice("Consider the following method: \n\n   public void mystery(int n)\n    {\n     If (n <= 0)\n           return;\n\n    mystery(n-1);\n\n for (int i = 0; i < n; i++)\n      {\n         System.out.println('-');\n      }\n\n       for (int i = 0; i < n; i++)\n       {\n         System.out.print('+');\n        }\n\n       System.out.println();\n }\n\nWhat is the output when mystery(4) is called?",1,2,0,new String[]{"----++++","----++++\n   ----++++\n  ----++++\n  ----++++","----+\n  ----++\n    ----+++\n   ----++++","-+\n --++\n  ---+++\n    ----++++","----++++\n   ---+++\n    --++\n  -+"}, "D"));
 
-    qBank.add(new MultipleChoice("Consider the following method:\n  \n  public void mysteryMix(String str)\n    {\n     Int len = str.length();\n       If (len >= 3)\n    \n{\n            mysteryMix(str.substring(0, len / 3));\n            System.out.print (str.substring(len / 3, 2*len / 3));\n         mysteryMix(str.substring(2*len / 3));\n     }\n }\n \n  What is the output when mysteryMix(“la-la-la!”) is called?",1,2,0,new String[]{"la-la-la!","ala-a","ala-la-la-l","lla-l","a-la-a!"}, "A"));
+    qBank.add(new MultipleChoice("Consider the following method:\n  \n  public void mysteryMix(String str)\n    {\n     Int len = str.length();\n       If (len >= 3)\n    \n{\n            mysteryMix(str.substring(0, len / 3));\n            System.out.print (str.substring(len / 3, 2*len / 3));\n         mysteryMix(str.substring(2*len / 3));\n     }\n }\n \n  What is the output when mysteryMix('la-la-la!') is called?",1,2,0,new String[]{"la-la-la!","ala-a","ala-la-la-l","lla-l","a-la-a!"}, "A"));
 
 
 
     //Chapter 7
     qBank.add(new MultipleChoice("Which of the following expressions is equivalent to ! (a || !b) (that is, has the same value for all possible values of the boolean variables a and b)?",1,2,0,new String[]{"a || !b", "!a || b", "a && b", "!a && !", "a && !b"}, "c"));
-    }
-}
+
+qBank.add(new FillInTheBlank("How many if statements does the GridWorld’s Bug class have? How many of them have an else clause?",1, 1, 1, "The class has one if statement with the else clause."));
+
+
+qBank.add(new ObjectiveQuestion("Write a method that returns the value of the larger of the intergers x and y (or either one, if they are equal): \n\nPublic static int\nmax(int x, int y)\n    {\n     … \n    }",1, 2, 2, "Answers may vary"));
+
+qBank.add(new FillInTheBlank("Fill in the missing code in the totalWages method, which calculates the total earnings for a week based on the number of hours worked and the hourly rate. The pay for overtime (hours worked over 40) is 1.5 times the regular rate. For example, totalWages(45, 12.50) should return 593.75. \n\nPublic double totalWages (double hours, double rate)\n    {\n      Double wages;\n      < … missing code>\n     \nReturn wages;\n    }\n\nAdd your code to the Wages.java program, available in JM\\Ch07\\Exercises, and test it.",1, 3, 1, "    if (hours <= 40)\n    {\n        wages = hours * rate;\n    }\n    else\n    {\n        wages = (((hours - 40) * rate) * 1.5) + (rate * 40);\n    }"));
+
+qBank.add(new ObjectiveQuestion("Invent three ways to express the XOR ('exclusive OR') operation in java (that is, write a Boolean expression that involves two boolean variables which is true if and only if exactly one of the two variables has the value true). HINT: one of the possible solutions involves only one (relational) operator",1, 3, 2, "Answers may vary"));
+
+qBank.add(new ObjectiveQuestion("Rewrite the following condition to avoid a possible arithmetic exception:\n\nif (Math.sqrt(x) < 3 && x > 7) …",1, 2, 2, "answer"));
+}}
+
