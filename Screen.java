@@ -100,13 +100,13 @@ public class Screen extends JFrame{
         west.add(boxes[2]);
         
         JButton finish = new JButton("Finish");
-        add.setPreferredSize(new Dimension(150,150));
-        add.addActionListener(new ActionListener() { 
+        finish.setPreferredSize(new Dimension(150,150));
+        finish.addActionListener(new ActionListener() { 
               public void actionPerformed(ActionEvent e) { 
                 finishButtonPressed();
               } 
             } );
-        west.add(add);
+        west.add(finish);
         
         
         // Set East Panel
