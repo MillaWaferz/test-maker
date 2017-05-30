@@ -156,9 +156,12 @@ public class Screen extends JFrame{
             else
                 n++;
         }
-        for (n = 0; n < Integer.parseInt(output[2]); n++)
-            text.append(selected.get(n).getQuestionText());
-        
+        int i = Integer.parseInt(output[2]);
+        for (n = 0; n < i; n++){
+            if(i > selected.size())
+                i = selected.size();
+            text.append(selected.remove((int)(Math.random()*i)).getQuestionText() + "\n");
+        }
     }
     
     
