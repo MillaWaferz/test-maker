@@ -22,7 +22,14 @@ class MultipleChoice extends Question
      
     public String getQuestionText()
     {
-        String output = "A) " + possibleAnswers[0] + "\n\n" + "B) " + possibleAnswers[1] + "\n\n" + "C) " + possibleAnswers[2] + "\n\n" + "D) " + possibleAnswers[3] + "\n\n" + "E) " + possibleAnswers[4] + "\n\n";
+        //String output = "A) " + possibleAnswers[0] + "\n\n" + "B) " + possibleAnswers[1] + "\n\n" + "C) " + possibleAnswers[2] + "\n\n" + "D) " + possibleAnswers[3] + "\n\n" + "E) " + possibleAnswers[4] + "\n\n";
+        String output = "";
+        int length = possibleAnswers.length;
+        String[] abcde = {"A) ", "B) ", "C) ", "D) ", "E) "};
+        for(int n = 0; n< length; n++)
+        {
+            output += abcde[n] + possibleAnswers[n] + "\n\n";
+        }
         
         return super.toString() + "\n\n" + output;
 
