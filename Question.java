@@ -13,7 +13,7 @@ public class Question {
     
    //defined the difficulty level
    public final int MIN_DIFFICULTY=1;
-   public final int MAX_DIFFICULTY=5;
+   public final int MAX_DIFFICULTY=3;
    
    //defined the instance variables
    private String questionText;
