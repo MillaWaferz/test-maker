@@ -20,25 +20,25 @@ public class QuestionBank
         qBank.add(new MultipleChoice("Which of the following statements will result in a syntax error?", 1, 1,0, new String[]{"String  x  = '123';","Integer x = '123';","Object x = '123';","String[] x = {'123'};","All of the above will compile without  errors"}, "B"));
      
         //Chapter 3
-        qBank.add(new MultipleChoice("True or False: The name of a class in Java must be the same as the name of its source file (excluding the extension .java).",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+        qBank.add(new MultipleChoice("True or False: The name of a class in Java must be the same as the name of its source file (excluding the extension .java).",1,1,0,new String[]{"True","False"}, "A"));
 
-        qBank.add(new MultipleChoice("True or False: The names of classes are case-sensitive.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+        qBank.add(new MultipleChoice("True or False: The names of classes are case-sensitive.",1,1,0,new String[]{"True","False"}, "A"));
 
-        qBank.add(new MultipleChoice("True or False: The import statement tells the computer which other classes use this class.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
+        qBank.add(new MultipleChoice("True or False: The import statement tells the computer which other classes use this class.",1,1,0,new String[]{"True","False"}, "B"));
 
-qBank.add(new MultipleChoice("True or False: The BugRunner program consists of one class.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+qBank.add(new MultipleChoice("True or False: The BugRunner program consists of one class.",1,1,0,new String[]{"True","False"}, "A"));
 
-qBank.add(new MultipleChoice("True or False: A Java program can have as many classes as necessary.",1,2,0,new String[]{"True","False","c","d","e"}, "A"));
+qBank.add(new MultipleChoice("True or False: A Java program can have as many classes as necessary.",1,2,0,new String[]{"True","False"}, "A"));
 
-qBank.add(new MultipleChoice("True or False: A Java program is allowed to create only one object of each class.",1,2,0,new String[]{"True","False","c","d","e"}, "B"));
+qBank.add(new MultipleChoice("True or False: A Java program is allowed to create only one object of each class.",1,2,0,new String[]{"True","False"}, "B"));
 
-qBank.add(new MultipleChoice("True or False: Every class has a method called main.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
+qBank.add(new MultipleChoice("True or False: Every class has a method called main.",1,1,0,new String[]{"True","False"}, "B"));
 
-qBank.add(new MultipleChoice("True or False: A class may have more than one constructor.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+qBank.add(new MultipleChoice("True or False: A class may have more than one constructor.",1,1,0,new String[]{"True","False"}, "A"));
 
-qBank.add(new MultipleChoice("True or False: The programmer gives names to objects in their program.",1,1,0,new String[]{"True","False","c","d","e"}, "A"));
+qBank.add(new MultipleChoice("True or False: The programmer gives names to objects in their program.",1,1,0,new String[]{"True","False"}, "A"));
 
-qBank.add(new MultipleChoice("True or False: When an object is created, the program always calls its init method.",1,1,0,new String[]{"True","False","c","d","e"}, "B"));
+qBank.add(new MultipleChoice("True or False: When an object is created, the program always calls its init method.",1,1,0,new String[]{"True","False"}, "B"));
 
     //Chapter 4
      
@@ -90,4 +90,3 @@ qBank.add(new ObjectiveQuestion("Invent three ways to express the XOR ('exclusiv
 
 qBank.add(new ObjectiveQuestion("Rewrite the following condition to avoid a possible arithmetic exception:\n\nif (Math.sqrt(x) < 3 && x > 7) …",1, 2, 2, "answer"));
 }}
-
