@@ -145,7 +145,8 @@ public class Screen extends JFrame{
         
         
         ArrayList<Question> selected = new ArrayList<Question>();
-        selected = QuestionBank.qBank;
+        for (int x = 0; x < QuestionBank.qBank.size(); x++)
+            selected.add(QuestionBank.qBank.get(x));
         int n = 0;
         while (n < selected.size())
         {
@@ -158,6 +159,8 @@ public class Screen extends JFrame{
         }
         int i = Integer.parseInt(output[2]);
         for (n = 0; n < i; n++){
+            if(selected.size() == 0)
+                break;
             if(i > selected.size())
                 i = selected.size();
             text.append(selected.remove((int)(Math.random()*i)).getQuestionText() + "\n");
